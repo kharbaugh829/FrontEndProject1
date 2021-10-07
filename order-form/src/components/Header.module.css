@@ -1,0 +1,10 @@
+.header {
+  padding: 10px;
+  
+}
+.contactbar {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-width: 600px;
+}
