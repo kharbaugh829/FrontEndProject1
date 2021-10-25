@@ -1,7 +1,6 @@
 import React from "react";
 
 import classes from "./Header.module.css";
-import NavigationBar from './NavigationBar';
 const Header = () => {
 
  
@@ -14,7 +13,7 @@ const Header = () => {
       </div>
 
       <img src="Assets/cropped-header-60-01-1.png" height="150px" alt="" />
- <NavigationBar />
+
 
 </div>
   );

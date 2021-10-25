@@ -1,12 +1,31 @@
-import React from 'react';
-import Home from './Home';
-import ContactUs from './ContactUs';
-const NavigationBar = () => {
-    return(
-<div><button value ="Home" type = "button" onClick={Home}>Home</button> 
-<button value ="Contact Us" type = "button" onClick={ContactUs}>Contact Us</button></div>
-    )
+import React from "react";
+import { NavLink } from "react-router-dom";
+import classes from "./NavigationBar.module.css";
 
+const NavigationBar = () => {
+  return (
+    <header className={classes.header}>
+      <nav>
+        <ul>
+          <li>
+            <NavLink activeClassName={classes.active} to="/Home">
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink activeClassName={classes.active} to="/ContactUs">
+              Contact Us
+            </NavLink>
+          </li>
+          <li>
+            <NavLink activeClassName={classes.active} to="/OrderRequestForm">
+              Order Request Form
+            </NavLink>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  );
 };
 
 export default NavigationBar;
