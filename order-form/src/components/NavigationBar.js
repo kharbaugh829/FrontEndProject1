@@ -18,8 +18,8 @@ const NavigationBar = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink activeClassName={classes.active} to="/OrderRequestForm">
-              Order Request Form
+            <NavLink activeClassName={classes.active} to="/OrderForm">
+              Order Form
             </NavLink>
           </li>
         </ul>

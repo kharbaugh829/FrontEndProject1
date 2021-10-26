@@ -3,6 +3,7 @@ import Home from "./components/Home";
 import Header from "./components/Header";
 import ContactUs from './components/ContactUs';
 import NavigationBar from "./components/NavigationBar";
+import OrderForm from "./components/OrderForm";
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
           </Route>
           <Route path='/ContactUs'>
             <ContactUs />
+          </Route>
+          <Route path='/OrderForm'>
+            <OrderForm />
           </Route>
         </Switch>
       </main>
