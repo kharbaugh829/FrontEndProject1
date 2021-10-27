@@ -3,7 +3,7 @@ import Home from "./components/Home";
 import Header from "./components/Header";
 import ContactUs from './components/ContactUs';
 import NavigationBar from "./components/NavigationBar";
-import OrderForm from "./components/OrderForm";
+import OrderForm from "./components/OrderForm/OrderForm";
 
 function App() {
   return (
