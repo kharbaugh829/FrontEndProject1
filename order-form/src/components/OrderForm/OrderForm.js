@@ -40,16 +40,22 @@ const prevPage = () => {
   if (page === 1){return};
 setPage((page) => page - 1);
 }
+// const submitHandler = (event) => {
+//   event.preventDefault();
+//   
+
+//   }
+// }
     return(
         <div>
         {/* progress bar? */}
 <progress max = "5" value ={page} />
         {/* content here */}
-{page === 1 && <BcOpt />}
+<form>{page === 1 && <BcOpt />}
 {page === 2 && <PrintOpt />}
 {page === 3 && <BcInfo />}
 {page === 4 && <ContactInfo />}
-{page === 5 && <Review />}
+{page === 5 && <Review />}</form>
 {page !== 1 && <button onClick ={prevPage}>Previous</button>}
 {page !== 5 && <button onClick ={nextPage}>Next</button>}
 
