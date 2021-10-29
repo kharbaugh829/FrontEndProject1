@@ -11,27 +11,26 @@ const OrderForm = () =>{
 // todo.... add data state
 
 // const [data, setData] = useState({
-//   contactName:{
-//   },
-//   contactEmail:{
-//   },
-//   contactPhone:{
-//   },
-//   additionalInfo:{
-//   },
-//   designOption:{},
-//   logoType:{},
-//   qty:{},
-//   inkOpt:{},
-//   orderName:{
-//   },
-//   title:{},
-//   officeName:{},
-//   msc:{},
-//   officePhone:{},
-//   orderEmail:{}
+//   contactName:'',
+//   contactEmail:'',
+//   contactPhone:'',
+//   additionalInfo:'',
+//   designOption:'',
+//   logoType:'',
+//   qty:'',
+//   inkOpt:'',
+//   orderName:'',
+//   title:'',
+//   officeName:'',
+//   msc:'',
+//   officePhone:'',
+//   orderEmail:''
 // })
-
+//   const updateData = (type, newData) => {
+//         setData(data => {
+//           return{...data, [type]: newData};
+//        });
+//    };
 const nextPage = () => {
   if (page === 5){return};
 setPage((page) => page + 1);
@@ -51,7 +50,7 @@ setPage((page) => page - 1);
         {/* progress bar? */}
 <progress max = "5" value ={page} />
         {/* content here */}
-<form>{page === 1 && <BcOpt />}
+<form>{page === 1 && <BcOpt data./>}
 {page === 2 && <PrintOpt />}
 {page === 3 && <BcInfo />}
 {page === 4 && <ContactInfo />}
