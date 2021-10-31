@@ -1,4 +1,4 @@
-const Review = () =>{
-    return <h1>review</h1>
+const Review = (props) =>{
+    return props.newData
     }
     export default Review;
