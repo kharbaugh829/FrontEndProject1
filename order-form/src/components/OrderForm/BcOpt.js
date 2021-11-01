@@ -18,7 +18,7 @@ const BcOpt = (props) => {
           value="Classic Version"
           checked={selectedOption === "Classic Version"}
           onChange={handleChange}
-        ></input>
+         />
         <img src="/Assets/WashU/BCOptions.jpg" class ='img-fluid' alt =''/>
       </label>
     </div>
@@ -29,7 +29,7 @@ const BcOpt = (props) => {
           value="Updated Version"
           checked={selectedOption === "Updated Version"}
           onChange={handleChange}
-        ></input>
+        />
         <img src="/Assets/WashU/BCOptions2.jpg"  class='img-fluid' alt =''/>
       </label>
         </div>

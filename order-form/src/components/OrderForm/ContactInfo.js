@@ -26,15 +26,15 @@ import {useState} from 'react';
     <div>
       <h1>Contact Information</h1>
       
-        <label>Contact First & Last Name</label>
-        <input type="text" value ={enteredContactName} onChange={contactNameChangeHandler}></input>
-
-        <label>Contact Phone Number</label>
-        <input type="tel" value ={enteredContactPhoneNumber} onChange={contactPhoneNumberChangeHandler}></input>
-
-        <label>Contact Email</label>
-        <input type="email" value ={enteredContactEmail} onChange={contactEmailChangeHandler}></input>
-    
+        <label>Contact First & Last Name
+        <input type="text" value ={enteredContactName} onChange={contactNameChangeHandler}/>
+</label>
+        <label>Contact Phone Number
+        <input type="tel" value ={enteredContactPhoneNumber} onChange={contactPhoneNumberChangeHandler}/>
+</label>
+        <label>Contact Email
+        <input type="email" value ={enteredContactEmail} onChange={contactEmailChangeHandler}/>
+        </label>
     </div>
   );
 };
