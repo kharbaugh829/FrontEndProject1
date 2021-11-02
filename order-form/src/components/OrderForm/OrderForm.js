@@ -68,7 +68,7 @@ const OrderForm = () => {
       {page !== 1 && <button onClick={prevPage}>Previous</button>}
       {page !== 5 && <button onClick={nextPage}>Next</button>}
 
-      {page === 5 && <button type="submit">Submit</button>}
+      {page === 5 && <button type="submit" onClick={submitHandler}>Submit</button>}
       {/* onClick= "submit" where does it go??? */}
    
     </div>

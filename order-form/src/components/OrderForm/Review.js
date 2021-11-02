@@ -1,4 +1,5 @@
 const Review = (props) =>{
-    return props.newData
+    return <div><p> review your order</p> 
+  </div>
     }
     export default Review;
