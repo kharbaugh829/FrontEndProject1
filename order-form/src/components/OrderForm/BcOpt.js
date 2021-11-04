@@ -11,11 +11,8 @@ const BcOpt = (props) => {
     setSelectedOption(option);
     props.update("bcOpt", {selectedOption: option});
   };
-  // const disableButton =()=>{
-  //   if(document.querySelector('input[name="bcOpt"]:checked')  === true){
-  //     return false
-  //   }
-  // }
+
+  
  
   return (
     <div class='container'>
@@ -45,7 +42,7 @@ const BcOpt = (props) => {
           onChange={handleChange}
         />
         <img src="/Assets/WashU/BCOptions2.jpg"  class='img-fluid' alt =''/>
-        <button onClick={props.nextPage} >Next</button>
+        <button onClick={props.nextPage} disabled={selectedOption===''}>Next</button>
         </div>
 </div>
       

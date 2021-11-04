@@ -40,7 +40,8 @@ const PrintOpt = (props) => {
   //   let other = event.target.value;
   //   setEnteredQuantity(other);
   //   props.update(other);
-  // };
+  // // };
+
 
   return (
     <div>
@@ -147,7 +148,7 @@ const PrintOpt = (props) => {
         </div>
       </label></div>
       <button onClick={props.prevPage}>Previous</button>
-      <button onClick={props.nextPage}>Next</button>
+      <button onClick={props.nextPage} disabled={quantity === '' || logoType === '' || inkOption === ''}>Next</button>
     </div>
   );
 };

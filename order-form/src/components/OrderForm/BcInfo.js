@@ -160,7 +160,13 @@ const BcInfo = (props) => {
         />
       </label>
       <button onClick={props.prevPage}>Previous</button>
-      <button onClick={props.nextPage}>Next</button>
+      <button onClick={props.nextPage} disabled = {enteredName === '' ||
+      enteredTitle === '' ||
+      enteredOffice === '' ||
+      enteredMsc === '' ||
+      enteredOfficePhone === '' ||
+      enteredOtherPhone === '' ||
+      enteredEmail === ''}>Next</button>
     </div>
   );
 };

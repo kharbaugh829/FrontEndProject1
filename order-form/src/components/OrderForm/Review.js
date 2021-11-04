@@ -1,4 +1,5 @@
 const Review = (props) => {
+ 
   return (
     <div>
       <p> review your order</p>
@@ -95,7 +96,7 @@ const Review = (props) => {
         </tbody>
       </table>
 
-      <div>{props.data.bcOpt.selectedOption}</div>
+     
       <button onClick={props.prevPage}>Previous</button>
       <button type="submit" onClick={props.submitHandler}>
         Submit
