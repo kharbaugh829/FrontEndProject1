@@ -146,6 +146,8 @@ const PrintOpt = (props) => {
         />}  */}
         </div>
       </label></div>
+      <button onClick={props.prevPage}>Previous</button>
+      <button onClick={props.nextPage}>Next</button>
     </div>
   );
 };

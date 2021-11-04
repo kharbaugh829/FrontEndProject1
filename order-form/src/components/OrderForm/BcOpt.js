@@ -4,11 +4,19 @@ import {useState} from 'react';
 
 const BcOpt = (props) => {
   const [selectedOption, setSelectedOption] = useState("");
+
   const handleChange = (event) => {
     let option = event.target.value;
+
     setSelectedOption(option);
     props.update("bcOpt", {selectedOption: option});
   };
+  // const disableButton =()=>{
+  //   if(document.querySelector('input[name="bcOpt"]:checked')  === true){
+  //     return false
+  //   }
+  // }
+ 
   return (
     <div class='container'>
       <h1>Choose Your Template</h1>
@@ -17,6 +25,7 @@ const BcOpt = (props) => {
     
         <input
           type="radio"
+          id='bcOpt'
           name='bcOpt'
           value="Classic Version"
           checked={selectedOption === "Classic Version"}
@@ -29,13 +38,14 @@ const BcOpt = (props) => {
    
         <input
           type="radio"
+          id='bcOpt'
           name='bcOpt'
           value="Updated Version"
           checked={selectedOption === "Updated Version"}
           onChange={handleChange}
         />
         <img src="/Assets/WashU/BCOptions2.jpg"  class='img-fluid' alt =''/>
-   
+        <button onClick={props.nextPage} >Next</button>
         </div>
 </div>
       

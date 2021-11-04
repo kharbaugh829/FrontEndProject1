@@ -41,6 +41,8 @@ import {useState} from 'react';
         <label>Contact Email
         <input type="email" value ={enteredContactEmail} onChange={contactEmailChangeHandler}/>
         </label>
+        <button onClick={props.prevPage}>Previous</button>
+      <button onClick={props.nextPage}>Next</button>
     </div>
   );
 };

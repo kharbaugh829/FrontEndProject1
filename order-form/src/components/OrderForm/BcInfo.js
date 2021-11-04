@@ -78,6 +78,7 @@ const BcInfo = (props) => {
   const otherPhoneChangeHandler = (event) => {
     let otherPhone = event.target.value;
     setEnteredOtherPhone(otherPhone);
+    
     props.update("bcInfo", {
       enteredName: enteredName,
       enteredTitle: enteredTitle,
@@ -158,6 +159,8 @@ const BcInfo = (props) => {
           onChange={emailChangeHandler}
         />
       </label>
+      <button onClick={props.prevPage}>Previous</button>
+      <button onClick={props.nextPage}>Next</button>
     </div>
   );
 };

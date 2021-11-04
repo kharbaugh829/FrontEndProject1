@@ -10,7 +10,9 @@ function App() {
     <div>
       <Header />
       <NavigationBar />
+ 
       <main>
+      
         <Switch>
           <Route path="/" exact>
             <Redirect to="/Home" />
