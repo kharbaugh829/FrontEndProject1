@@ -13,104 +13,150 @@ const BcInfo = (props) => {
     event.preventDefault();
     let name = event.target.value;
     setEnteredName(name);
-    props.update(name);
+    props.update("bcInfo", {
+      enteredName: name,
+      enteredTitle: enteredTitle,
+      enteredOffice: enteredOffice,
+      enteredMsc: enteredMsc,
+      enteredOfficePhone: enteredOfficePhone,
+      enteredOtherPhone: enteredOtherPhone,
+      enteredEmail: enteredEmail,
+    });
   };
   const titleChangeHandler = (event) => {
-    event.preventDefault();
     let title = event.target.value;
     setEnteredTitle(title);
-    props.update(title);
+    props.update("bcInfo", {
+      enteredName: enteredName,
+      enteredTitle: title,
+      enteredOffice: enteredOffice,
+      enteredMsc: enteredMsc,
+      enteredOfficePhone: enteredOfficePhone,
+      enteredOtherPhone: enteredOtherPhone,
+      enteredEmail: enteredEmail,
+    });
   };
   const officeChangeHandler = (event) => {
-    event.preventDefault();
     let officeName = event.target.value;
     setEnteredOffice(officeName);
-    props.update(officeName);
+    props.update("bcInfo", {
+      enteredName: enteredName,
+      enteredTitle: enteredTitle,
+      enteredOffice: officeName,
+      enteredMsc: enteredMsc,
+      enteredOfficePhone: enteredOfficePhone,
+      enteredOtherPhone: enteredOtherPhone,
+      enteredEmail: enteredEmail,
+    });
   };
   const mscChangeHandler = (event) => {
-    event.preventDefault();
     let msc = event.target.value;
     setEnteredMsc(msc);
-    props.update(msc);
+    props.update("bcInfo", {
+      enteredName: enteredName,
+      enteredTitle: enteredTitle,
+      enteredOffice: enteredOffice,
+      enteredMsc: msc,
+      enteredOfficePhone: enteredOfficePhone,
+      enteredOtherPhone: enteredOtherPhone,
+      enteredEmail: enteredEmail,
+    });
   };
   const officePhoneChangeHandler = (event) => {
-    event.preventDefault();
     let officePhone = event.target.value;
     setEnteredOfficePhone(officePhone);
-    props.update(officePhone);
+    props.update("bcInfo", {
+      enteredName: enteredName,
+      enteredTitle: enteredTitle,
+      enteredOffice: enteredOffice,
+      enteredMsc: enteredMsc,
+      enteredOfficePhone: officePhone,
+      enteredOtherPhone: enteredOtherPhone,
+      enteredEmail: enteredEmail,
+    });
   };
   const otherPhoneChangeHandler = (event) => {
-    event.preventDefault();
     let otherPhone = event.target.value;
     setEnteredOtherPhone(otherPhone);
-    props.update(otherPhone);
+    props.update("bcInfo", {
+      enteredName: enteredName,
+      enteredTitle: enteredTitle,
+      enteredOffice: enteredOffice,
+      enteredMsc: enteredMsc,
+      enteredOfficePhone: enteredOfficePhone,
+      enteredOtherPhone: otherPhone,
+      enteredEmail: enteredEmail,
+    });
   };
   const emailChangeHandler = (event) => {
-    event.preventDefault();
     let email = event.target.value;
     setEnteredEmail(email);
-    props.update(email);
+    props.update("bcInfo", {
+      enteredName: enteredName,
+      enteredTitle: enteredTitle,
+      enteredOffice: enteredOffice,
+      enteredMsc: enteredMsc,
+      enteredOfficePhone: enteredOfficePhone,
+      enteredOtherPhone: enteredOtherPhone,
+      enteredEmail: email,
+    });
   };
 
   return (
     <div>
       <h1>Business Card Information</h1>
 
-      <label>First & Last Name
-      <input
-        type="text"
-        id="name"
-        value={enteredName}
-        onChange={nameChangeHandler}
-      />
+      <label>
+        First & Last Name
+        <input
+          type="text"
+          id="name"
+          value={enteredName}
+          onChange={nameChangeHandler}
+        />
       </label>
-      <label>Title
-      <input
-        type="text"
-        id="title"
-        value={enteredTitle}
-        onChange={titleChangeHandler}
-      /></label>
-
-      <label>Office Name
-      <input
-        type="text"
-        id="officeName"
-        value={enteredOffice}
-        onChange={officeChangeHandler}
-      /></label>
-
-      <label>Mail Stop Code
-      <input
-        type="text"
-        id="msc"
-        value={enteredMsc}
-        onChange={mscChangeHandler}
-      /></label>
-
-      <label>Office Phone
-      <input
-        type="tel"
-        id="officePhone"
-        value={enteredOfficePhone}
-        onChange={officePhoneChangeHandler}
-      />
+      <label>
+        Title
+        <input type="text" value={enteredTitle} onChange={titleChangeHandler} />
       </label>
-      <label>Other Phone
-      <input
-        type="tel"
-        id="otherPhone"
-        value={enteredOtherPhone}
-        onChange={otherPhoneChangeHandler}
-      />
+
+      <label>
+        Office Name
+        <input
+          type="text"
+          value={enteredOffice}
+          onChange={officeChangeHandler}
+        />
       </label>
-      <label>Email
-      <input
-        type="email"
-        id="email"
-        value={enteredEmail}
-        onChange={emailChangeHandler}
-      />
+
+      <label>
+        Mail Stop Code
+        <input type="text" value={enteredMsc} onChange={mscChangeHandler} />
+      </label>
+
+      <label>
+        Office Phone
+        <input
+          type="tel"
+          value={enteredOfficePhone}
+          onChange={officePhoneChangeHandler}
+        />
+      </label>
+      <label>
+        Other Phone
+        <input
+          type="tel"
+          value={enteredOtherPhone}
+          onChange={otherPhoneChangeHandler}
+        />
+      </label>
+      <label>
+        Email
+        <input
+          type="email"
+          value={enteredEmail}
+          onChange={emailChangeHandler}
+        />
       </label>
     </div>
   );

@@ -5,22 +5,28 @@ import {useState} from 'react';
   const [enteredContactEmail, setEnteredContactEmail] = useState('');
   
   const contactNameChangeHandler = event =>{
-    event.prevent.default();
+    
     let name = event.target.value;
     setEnteredContactName(name);
-    props.updateData(name);
+    props.update('contactInfo',{enteredContactName: name,
+      enteredContactEmail: enteredContactEmail,
+      enteredContactPhone: enteredContactPhoneNumber});
   }
   const contactPhoneNumberChangeHandler = event =>{
-    event.prevent.default();
+    
     let phone = event.target.value;
     setEnteredContactPhoneNumber(phone);
-    props.updateData(phone);
+    props.update('contactInfo',{enteredContactName: enteredContactName,
+    enteredContactEmail: enteredContactEmail,
+    enteredContactPhone: phone});
   }
   const contactEmailChangeHandler = event => {
-    event.prevent.default();
+    
     let email = event.target.value;
     setEnteredContactEmail(email);
-    props.updateData(email);
+    props.update('contactInfo',{enteredContactName: enteredContactName,
+      enteredContactEmail: email,
+      enteredContactPhone: enteredContactPhoneNumber});
   }
   return (
     <div>
